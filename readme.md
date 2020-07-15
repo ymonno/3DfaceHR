@@ -6,7 +6,7 @@ This code estimate a person's heart rate(HR) utilizing 3D facial landmarks. We p
 visibility check manner based on the face patch normal in the 3D space. We only use visible patch for BVP estimation. Following figure is the step-by-step explanation of our visibility check.
 
 
-<img src="pic/fig2.png" > 
+<img src="images/fig2.png" > 
 
 *We used <a href="https://github.com/1adrianb/face-alignment" target="_blank">'face-alignment'</a></b> as a 3D facial landmark detection. We proovide the deected 3D facial landmarks of our sample data.
 
@@ -25,7 +25,7 @@ visibility check manner based on the face patch normal in the 3D space. We only 
 You can instantly run our whole code to our sample data and display a comparison between sequential HR of baseline method, proposed method, and reference contact PPG sensor visually as shown in Fig.3. Estimated HR at a certain time window is stored in the corresponding matfile.
 
 <div align = "center">
-<img src="pic/fig3.png" width= 50%> 
+<img src="images/fig3.png" width= 50%> 
 </div>
 
 ### __-getSignals\_*.m__
