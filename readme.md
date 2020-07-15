@@ -111,5 +111,5 @@ This function devides the edge of cheek region (Gray bold edge in Fig. 2(b)) bas
 ## Citation
 "Remote Heart Rate Estimation Based on 3D Facial Landmarks"<br>
 Yuichiro Maki, Yusuke Monno, Masayuki Tanaka, and Masatoshi Okutomi,<br>
-International Conference of the IEEE Engineering in Medicine and Biology Society (EMBC2020), pp.XXXX-XXXX, July 2020 (To appear).
+International Conference of the IEEE Engineering in Medicine and Biology Society (EMBC2020), July 2020.
 
