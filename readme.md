@@ -1,23 +1,23 @@
 # Remote Heart Rate Estimation Based on 3D Facial Landmarks
-We provide a code for remote heart rate estimation based on 3D facial landmarks presented in EMBC 2020 paper entitled "Remote Heart Rate Estimation Based on 3D Facial Landmarks".
+We provide the code for "Remote Heart Rate Estimation Based on 3D Facial Landmarks" presented in EMBC2020.
 
 ## Overview
-This code estimate a person's heart rate(HR) utilizing 3D facial landmarks. We propose a novel face patch
-visibility check manner based on the face patch normal in the 3D space. We only use visible patch for BVP estimation. Following figure is the step-by-step explanation of our visibility check.
+This code estimates a person's heart rate (HR) based on 3D facial landmarks. We propose a novel face patch visibility check manner based on the face patch normal in the 3D space. We only use visible patches for BVP estimation. The following figure is the step-by-step explanation of our visibility check.
 
 
 <img src="images/fig2.png" > 
 
-*We used <a href="https://github.com/1adrianb/face-alignment" target="_blank">'face-alignment'</a></b> as a 3D facial landmark detection. We proovide the deected 3D facial landmarks of our sample data.
 
-## Quick start
+## Quick start using our sample data
 
 1. Download our repository  
  ` git close https://github.com/ymonno/3DfaceHR.git /path/to/direc ` <br>
-2. Run the following Matlab commands to download our sample data and <a href="https://research.ics.aalto.fi/ica/fastica/code/dlcode.shtml">'FastICA'</a>  
+2. Run the following Matlab commands to download our sample data.</a>  
 ` cd  /path/to/direc `  
-` setupHRestimation() `  
+` setupHRestimation() ` 
+3. Run demo.m
 
+*In our method, we used <a href="https://github.com/1adrianb/face-alignment" target="_blank">'the face alignment method presented in ICCV2017'</a></b> for 3D facial landmark detection. We proovide the deected 3D facial landmarks for our sample data.
 
 ## Main Functions
 
