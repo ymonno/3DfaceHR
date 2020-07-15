@@ -12,12 +12,30 @@ This code estimates a person's heart rate (HR) based on 3D facial landmarks. We 
 
 1. Download our repository  
  ` git close https://github.com/ymonno/3DfaceHR.git /path/to/direc ` <br>
-2. Run the following Matlab commands to download our sample data.</a>  
-` cd  /path/to/direc `  
-` setupHRestimation() ` 
+2. Run the following Matlab commands to download our sample data. 
+ ` cd  /path/to/direc `  
+ ` setupHRestimation() ` 
 3. Run demo.m
 
-*In our method, we used <a href="https://github.com/1adrianb/face-alignment" target="_blank">'the face alignment method presented in ICCV2017'</a></b> for 3D facial landmark detection. We proovide the deected 3D facial landmarks for our sample data.
+*In our method, we used <a href="https://github.com/1adrianb/face-alignment" target="_blank">'the face alignment method presented in ICCV2017'</a> for 3D facial landmark detection. We proovide the deected 3D facial landmarks for our sample data.
+
+## Setups for using your own data
+
+You need to prepare 3D landmarks data before run main.m.
+
+1. Install [Anaconda](https://www.anaconda.com/).
+
+2. Install face-alignment using conda <br>
+    Run the following comands on the anaconda.<br>
+    ` conda create face_alignment `<br>
+    ` conda activate face_alignment`
+    ` conda install -c 1adrianb face_alignment `<br>
+
+3. Run face-alignment.
+    1. Edit ./run_face_alignment.py, 20th row of /path/to/imgages/
+    2. Move ./run_face_alignment.py to acaconda working directory.
+    3. Run ` run_face_alignment.py ` on the conda comand line.
+
 
 ## Main Functions
 
@@ -27,6 +45,15 @@ You can instantly run our whole code to our sample data and display a comparison
 <div align = "center">
 <img src="images/fig3.png" width= 50%> 
 </div>
+
+### __- main.m__
+You can run our proposed method and baseline methods. We assume that input is set of images at a certain folder. Estimated HR at a certain time window is stored in the corresponding matfile.
+
+#### Input
+- movie2Use: Define which part of movie to use. If you want to use 5 sec. to 45 sec. of the movie the `movie2Use = [5 45]`. 
+- path_to_images: Path to the folder which contains images.
+- frameRate: Framerate of the movie. 
+
 
 ### __-getSignals\_*.m__
 Estimate blood volume pulse (BVP) using our proposed method or compared methods.<br>
@@ -90,23 +117,4 @@ This function inter devide the edge of cheek region (Gray bold edge in Fig.2(b))
 - Nvec: Normal vector of the facial patch as shown black vector in Fig.2(c). Nvec = [Nvec_x, Nvec_y, Nvec_z]
 
 
-### __- main.m__
-You can run our proposed method and baseline methods. We assume that input is set of images at a certain folder. Estimated HR at a certain time window is stored in the corresponding matfile.
-#### setup
-You have to finish some preparations before run main.m. 
-1. Install [Anaconda](https://www.anaconda.com/).
 
-2. Install face-alignment using conda <br>
-    Run following comands on the anaconda.<br>
-    ` conda create face_alignment `<br>
-    ` conda activate face_alignment`
-    ` conda install -c 1adrianb face_alignment `<br>
-3. Run face-alignment.
-    1. Edit ./run_face_alignment.py, 20th raw of /path/to/imgages/
-    2. Move ./run_face_alignment.py to acaconda working directory.
-    3. Run ` run_face_alignment.py ` on the conda comand line.
-4. [OPTIONAL] To use our data, run ` setupHRestimationForMain() ` on the Matlab.
-#### Input
-- movie2Use: Define which part of movie to use. If you want to use 5 sec. to 45 sec. of the movie the `movie2Use = [5 45]`. 
-- path_to_images: Path to the folder which contains images.
-- frameRate: Framerate of the movie. 
